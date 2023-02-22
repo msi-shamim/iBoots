@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="450.0" minWidth="720.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.incrementsinc.services.iboots.HelloController">
+   <children>
+      <Label alignment="CENTER" text="WELCOME BACK!" textAlignment="CENTER" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </padding>
+      </Label>
+      <HBox layoutX="16.0" layoutY="80.0" prefHeight="40.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets bottom="6.0" left="16.0" right="16.0" top="6.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../../../../media/img-usb.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnSelectUSBDrive" minWidth="150.0" onAction="#onSelectUSBDriveClick" text="Select USB Drive">
+               <HBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </HBox.margin>
+            </Button>
+            <Label fx:id="txtSelectUSBDrive" prefHeight="26.0" prefWidth="320.0" text="No drive selected!" textFill="#707070">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="8.0" right="8.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </Label>
+            <Button fx:id="btnFormatDrive" mnemonicParsing="false" onAction="#onFormatDriveClick" text="Format (FAT32)">
+               <HBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="16.0" layoutY="122.0" prefHeight="40.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets bottom="6.0" left="16.0" right="16.0" top="6.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../../../../media/img-disc.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnSelectISOFile" minWidth="150.0" onAction="#onSelectISOFileClick" text="Select ISO File">
+               <HBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </HBox.margin>
+            </Button>
+            <Label fx:id="txtSelectISOFile" prefHeight="18.0" text="No iso file selected!" textFill="#707070">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="8.0" right="8.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <ProgressBar fx:id="pbProcessProgress" layoutX="24.0" layoutY="227.0" prefWidth="200.0" progress="0.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" />
+      <Label fx:id="txtProcessProgressLogs" layoutX="366.0" layoutY="257.0" text="Process logs" textFill="#707070" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0">
+         <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </padding>
+      </Label>
+      <HBox alignment="CENTER" layoutX="16.0" layoutY="392.0" prefHeight="40.0" spacing="300.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0">
+         <children>
+            <Button fx:id="btnCancel" minWidth="150.0" mnemonicParsing="false" onAction="#onCancelClick" style="-fx-background-color: #C40603;" text="Cancel" textFill="WHITE">
+               <HBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnCreateBootable" layoutX="18.0" layoutY="18.0" minWidth="150.0" mnemonicParsing="false" onAction="#onCreateBootableClick" style="-fx-background-color: #0CB414;" text="Create Bootable" textFill="WHITE">
+               <HBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </children>
+</AnchorPane>
